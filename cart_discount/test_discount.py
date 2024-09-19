@@ -13,5 +13,22 @@ class TestDiscount(TestCase):
     # TODO more unit tests here. Each test should test one scenario
 
 
+    def test_list_of_more_three_prices(self):
+        prices = [15,25,5,20]
+        expected_discount = 5
+        self.assertEqual(expected_discount,discount(prices))
+
+    
+    def test_empty_list(self): # an empty list should return 0 
+        prices = []
+        expected_discount = 0 
+        self.assertEqual(expected_discount,discount(prices))
+
+    
+    def test_list_of_float(self):
+        self.fail('finish this test')
+
+
+
 if __name__ == '__main__':
     unittest.main()
